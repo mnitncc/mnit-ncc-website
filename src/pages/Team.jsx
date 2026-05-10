@@ -127,7 +127,7 @@ const Team = () => {
               variants={itemVariants}
               className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
             >
-              <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
+              <div className="h-72 md:h-80 overflow-hidden bg-gray-100 flex items-center justify-center">
                  <img
                   src={cadet.image}
                   alt={cadet.name}

@@ -1,7 +1,29 @@
 import React from 'react';
-import Hero from '../components/Hero';
+import Hero from '../components/home/Hero';
 import { motion } from 'framer-motion';
-import { Target, Flag, Music, Users, Shield, Award } from 'lucide-react';
+import { Target, Flag, Music, Users, Shield, Award, Camera } from 'lucide-react';
+import armyDay from '../assets/events/army-day-event.jpg';
+import shouryaSandhya from '../assets/events/shourya-sandhya.jpg';
+import cleanliness1 from '../assets/events/cleanliness-campaign.jpg';
+import cleanliness2 from '../assets/events/cleanliness-campaign-2.jpg';
+import plantation from '../assets/events/plantation-drive.jpg';
+import hero1 from '../assets/home/hero-1.jpeg';
+import hero2 from '../assets/home/hero-2.jpeg';
+import hero3 from '../assets/home/hero-3.jpg';
+import hero4 from '../assets/home/hero-4.jpeg';
+
+// Add or remove photos here — they will automatically appear in the reel.
+const reelImages = [
+  { src: armyDay, caption: 'Army Day Event' },
+  { src: shouryaSandhya, caption: 'Shourya Sandhya' },
+  { src: cleanliness1, caption: 'Cleanliness Campaign' },
+  { src: plantation, caption: 'Plantation Drive' },
+  { src: cleanliness2, caption: 'Cleanliness Campaign' },
+  { src: hero1, caption: 'NCC Cadets' },
+  { src: hero2, caption: 'NCC Cadets' },
+  { src: hero3, caption: 'NCC Cadets' },
+  { src: hero4, caption: 'NCC Cadets' },
+];
 
 const SectionHeader = ({ title, subtitle }) => (
   <div className="text-center mb-16">
@@ -197,6 +219,49 @@ const Home = () => {
                Source: indiancc.nic.in
             </motion.div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Photo Reel Section */}
+      <section className="py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+        <div className="w-full mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
+          <SectionHeader
+            title="Moments in Motion"
+            subtitle="Glimpses from our parades, drives, and events — a continuously rolling reel of cadet life."
+          />
+        </div>
+
+        <div className="relative group">
+          {/* Edge fade overlays */}
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-24 md:w-40 bg-gradient-to-r from-gray-50 to-transparent z-10"></div>
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-24 md:w-40 bg-gradient-to-l from-gray-50 to-transparent z-10"></div>
+
+          {/* Marquee track — duplicated for seamless loop. Pauses on hover. */}
+          <div
+            className="flex gap-6 w-max animate-marquee group-hover:[animation-play-state:paused]"
+            style={{ '--marquee-duration': `${Math.max(20, reelImages.length * 4)}s`, willChange: 'transform' }}
+          >
+            {[...reelImages, ...reelImages].map((img, idx) => (
+              <div
+                key={idx}
+                className="relative shrink-0 w-72 md:w-96 h-56 md:h-72 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group/card"
+              >
+                <img
+                  src={img.src}
+                  alt={img.caption || 'NCC moment'}
+                  className="w-full h-full object-cover transform group-hover/card:scale-110 transition-transform duration-500"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-300"></div>
+                {img.caption && (
+                  <div className="absolute bottom-3 left-4 right-4 text-white text-sm md:text-base font-semibold opacity-0 group-hover/card:opacity-100 translate-y-2 group-hover/card:translate-y-0 transition-all duration-300 flex items-center gap-2">
+                    <Camera className="w-4 h-4 text-mnit-gold" />
+                    {img.caption}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </div>

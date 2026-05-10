@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import hero1 from '../assets/Hero1.jpeg';
-import hero2 from '../assets/Hero2.jpeg';
-import hero3 from '../assets/Hero3.jpg';
-import hero4 from '../assets/hero4.jpeg';
+import hero1 from '../../assets/home/hero-1.jpeg';
+import hero2 from '../../assets/home/hero-2.jpeg';
+import hero3 from '../../assets/home/hero-3.jpg';
+import hero4 from '../../assets/home/hero-4.jpeg';
 
 const images = [hero1, hero2, hero3, hero4];
 

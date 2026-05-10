@@ -1,8 +1,8 @@
-import armyDay from '../assets/Army day event_.jpg';
-import shauryaSandhya from '../assets/Army day shourya Sandhya_.jpg';
-import cleanlinessImage from '../assets/Cleanliness campaign_.jpg';
-import plantationImage from '../assets/Plantation_.jpg';
-import hero2 from '../assets/Hero2.jpeg';
+import armyDay from '../assets/events/army-day-event.jpg';
+import shauryaSandhya from '../assets/events/shourya-sandhya.jpg';
+import cleanlinessImage from '../assets/events/cleanliness-campaign.jpg';
+import plantationImage from '../assets/events/plantation-drive.jpg';
+import hero2 from '../assets/home/hero-2.jpeg';
 
 export const eventsData = [
   {

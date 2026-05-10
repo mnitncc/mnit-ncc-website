@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import cleanlinessImg from '../assets/Cleanliness campaign_.jpg';
-import plantationImg from '../assets/Plantation_.jpg';
-import armyDayImg from '../assets/Army day event_.jpg';
+import cleanlinessImg from '../assets/events/cleanliness-campaign.jpg';
+import plantationImg from '../assets/events/plantation-drive.jpg';
+import armyDayImg from '../assets/events/army-day-event.jpg';
 
 const About = () => {
     return (
@@ -16,7 +16,7 @@ const About = () => {
                 >
                     {/* Text Section */}
                     <div className="lg:w-1/2">
-                        <div className="mb-6">~
+                        <div className="mb-6">
                             <h2 className="text-mnit-red font-bold tracking-widest uppercase text-sm mb-2">Who We Are</h2>
                             <h1 className="text-3xl md:text-5xl font-bold text-mnit-blue leading-tight">
                                 UNITY AND DISCIPLINE <span className="font-hindi">एकता और अनुशासन</span>
