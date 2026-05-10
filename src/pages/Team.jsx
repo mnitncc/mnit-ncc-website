@@ -117,10 +117,11 @@ const Team = () => {
       >
         <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-mnit-blue">Our Cadets</h2>
+            <p className="mt-2 text-lg font-semibold text-mnit-red">NCC Batch 2025-26</p>
             <div className="w-24 h-1 bg-mnit-red mx-auto mt-2 rounded"></div>
         </div>
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 justify-items-center">
           {cadets.map((cadet) => (
             <motion.div
               key={cadet.id}
