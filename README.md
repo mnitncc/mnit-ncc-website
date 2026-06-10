@@ -60,11 +60,4 @@ frontend/
 └── tailwind.config.js   # Tailwind customization
 ```
 
-## 👨‍💻 Developer
-
-**Bhavdeep**
-- GitHub: [Bhavdeepmnit](https://github.com/Bhavdeepmnit)
-- Portfolio: [bhavdeepmnit.vercel.app](https://bhavdeepmnit.vercel.app)
-
----
 *Unity and Discipline.*
