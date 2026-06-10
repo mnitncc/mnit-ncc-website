@@ -12,7 +12,7 @@ A modern frontend web application designed for the National Cadet Corps (NCC) ch
 
 ## 🛠️ Tech Stack
 
-- **Frontend Framework**: React 18
+- **Frontend Framework**: React 19
 - **Build Tool**: Vite
 - **Styling**: Tailwind CSS
 - **Animations**: Framer Motion
@@ -29,8 +29,8 @@ A modern frontend web application designed for the National Cadet Corps (NCC) ch
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/Bhavdeepmnit/ncc-webiste.git
-   cd ncc-webiste/frontend
+   git clone https://github.com/himansh24dev/ncc-mnit-website.git
+   cd ncc-mnit-website
    ```
 
 2. Install dependencies
@@ -48,16 +48,27 @@ A modern frontend web application designed for the National Cadet Corps (NCC) ch
 ## 📁 Project Structure
 
 ```
-frontend/
+ncc-mnit-website/
 ├── src/
 │   ├── components/      # UI components
 │   ├── pages/           # Page layouts
+│   ├── layouts/         # Shared page layouts (navbar, footer)
+│   ├── data/            # Site content (team, events, etc.)
 │   ├── assets/          # Images and static files
 │   ├── App.jsx          # Main application component
 │   ├── main.jsx         # Entry point
 │   └── index.css        # Global Tailwind styles
+├── public/              # Static public assets
 ├── package.json         # Project configuration
+├── vercel.json          # Vercel SPA routing config
 └── tailwind.config.js   # Tailwind customization
 ```
 
+## 👨‍💻 Maintainer
+
+**Himanshu Sharma**
+- GitHub: [himansh24dev](https://github.com/himansh24dev)
+- Repository: [ncc-mnit-website](https://github.com/himansh24dev/ncc-mnit-website)
+
+---
 *Unity and Discipline.*
