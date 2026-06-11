@@ -27,7 +27,7 @@ const Downloads = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gray-50 py-20">
+    <div className="min-h-screen bg-mnit-tint py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12">
         {/* Header */}
         <div className="text-center mb-12">
@@ -43,7 +43,7 @@ const Downloads = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-5xl font-bold text-mnit-blue"
+            className="text-4xl md:text-5xl font-bold text-gradient-ncc"
           >
             Downloads
           </motion.h1>
@@ -51,7 +51,7 @@ const Downloads = () => {
             initial={{ width: 0 }}
             animate={{ width: 100 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="h-1 bg-mnit-red mx-auto rounded-full mt-4"
+            className="h-1 bg-gradient-to-r from-mnit-red to-mnit-gold mx-auto rounded-full mt-4"
           />
           <motion.p
             initial={{ opacity: 0 }}
@@ -85,7 +85,7 @@ const Downloads = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden"
+          className="bg-white rounded-2xl shadow-lg border border-gray-100 border-t-4 border-t-mnit-blue overflow-hidden"
         >
           {filtered.length === 0 ? (
             <div className="p-12 text-center text-gray-500">

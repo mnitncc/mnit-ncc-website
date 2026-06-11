@@ -5,9 +5,12 @@ export default {
     extend: {
       colors: {
         mnit: {
-          blue: "#161982", // Updated Navy blue
+          blue: "#161982", // NCC navy blue
+          navy: "#0c0e45", // Deeper navy for gradients / dark blocks
           red: "#C41E3A", // Cardinal red
           gold: "#FFD700", // Gold
+          sky: "#2563EB", // Sky / royal blue accent (NCC flag blue)
+          tint: "#eef1f8", // Soft slate-sky page background
         },
       },
       fontFamily: {

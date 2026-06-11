@@ -21,7 +21,7 @@ const Team = () => {
   };
 
   return (
-    <div className="w-full min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="w-full min-h-screen bg-mnit-tint py-12 px-4 sm:px-6 lg:px-8">
       {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -29,7 +29,7 @@ const Team = () => {
         transition={{ duration: 0.8 }}
         className="text-center mb-16"
       >
-        <h1 className="text-4xl sm:text-5xl font-extrabold text-mnit-blue tracking-tight">
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-gradient-ncc tracking-tight">
           Meet Our Team
         </h1>
         <p className="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
@@ -87,7 +87,7 @@ const Team = () => {
             <motion.div
               key={member.id}
               variants={itemVariants}
-              className="bg-white rounded-xl shadow-lg overflow-hidden w-full max-w-xs transform transition hover:-translate-y-2 duration-300"
+              className="bg-white rounded-xl shadow-lg overflow-hidden w-full max-w-xs transform transition hover:-translate-y-2 duration-300 border-t-4 border-mnit-blue"
             >
               <div className="h-56 overflow-hidden bg-gray-100">
                 <img
@@ -126,7 +126,7 @@ const Team = () => {
             <motion.div
               key={cadet.id}
               variants={itemVariants}
-              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 w-full max-w-xs border-t-4 border-mnit-blue"
             >
               <div className="h-72 md:h-80 overflow-hidden bg-gray-100 flex items-center justify-center">
                  <img

@@ -4,7 +4,19 @@
 
 @layer base {
   body {
-    @apply antialiased text-gray-900 bg-white;
+    @apply antialiased text-gray-900 bg-mnit-tint;
+  }
+}
+
+@layer components {
+  /* NCC navy → sky → red gradient text, used for major section headings */
+  .text-gradient-ncc {
+    @apply bg-gradient-to-r from-mnit-blue via-mnit-sky to-mnit-red bg-clip-text text-transparent;
+  }
+
+  /* Short red → gold underline accent under headings */
+  .ncc-accent-bar {
+    @apply h-1 w-24 rounded bg-gradient-to-r from-mnit-red to-mnit-gold;
   }
 }
 

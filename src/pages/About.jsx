@@ -6,7 +6,7 @@ import armyDayImg from '../assets/events/army-day-event.jpg';
 
 const About = () => {
     return (
-        <div className="w-full bg-white py-20">
+        <div className="w-full bg-mnit-tint py-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
                 <motion.div 
                     initial={{ opacity: 0, y: 30 }}
@@ -18,7 +18,7 @@ const About = () => {
                     <div className="lg:w-1/2">
                         <div className="mb-6">
                             <h2 className="text-mnit-red font-bold tracking-widest uppercase text-sm mb-2">Who We Are</h2>
-                            <h1 className="text-3xl md:text-5xl font-bold text-mnit-blue leading-tight">
+                            <h1 className="text-3xl md:text-5xl font-bold text-gradient-ncc leading-tight">
                                 UNITY AND DISCIPLINE <span className="font-hindi">एकता और अनुशासन</span>
                             </h1>
                         </div>

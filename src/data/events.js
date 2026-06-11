@@ -2,9 +2,25 @@ import armyDay from '../assets/events/army-day-event.jpg';
 import shauryaSandhya from '../assets/events/shourya-sandhya.jpg';
 import cleanlinessImage from '../assets/events/cleanliness-campaign.jpg';
 import plantationImage from '../assets/events/plantation-drive.jpg';
+import plantation2026_1 from '../assets/events/plantation-2026-1.jpeg';
+import plantation2026_2 from '../assets/events/plantation-2026-2.jpeg';
+import plantation2026_3 from '../assets/events/plantation-2026-3.jpeg';
 import hero2 from '../assets/home/hero-2.jpeg';
 
 export const eventsData = [
+  {
+    id: 6,
+    title: "Plantation Drive",
+    date: "June 5, 2026",
+    time: "12:00",
+    location: "MNIT Campus, Jaipur",
+    image: plantation2026_1,
+    images: [plantation2026_1, plantation2026_2, plantation2026_3],
+    description: [
+      "NCC cadets of MNIT Jaipur organized a plantation drive across the campus on 5 June 2026, planting saplings to enhance the greenery and promote environmental awareness.",
+      "The drive saw enthusiastic participation from cadets, who worked together to plant and nurture various species, reinforcing the NCC's commitment to environmental conservation and community service."
+    ]
+  },
   {
     id: 3,
     title: "Republic Day Celebration",
@@ -51,7 +67,7 @@ export const eventsData = [
   {
     id: 5,
     title: "Plantation Drive",
-    date: "January 18, 2025",
+    date: "January 18, 2026",
     time: "08:30",
     location: "MNIT Campus, Jaipur",
     image: plantationImage,
@@ -63,7 +79,7 @@ export const eventsData = [
   {
     id: 4,
     title: "Cleanliness Campaign",
-    date: "January 18, 2025",
+    date: "January 18, 2026",
     time: "07:00",
     location: "MNIT Campus, Jaipur",
     image: cleanlinessImage,

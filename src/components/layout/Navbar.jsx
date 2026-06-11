@@ -9,6 +9,7 @@ const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'About', path: '/about' },
   { name: 'Activities', path: '/activities' },
+  { name: 'Camps', path: '/camps' },
   { name: 'Cadets', path: '/cadets' },
   { name: 'Downloads', path: '/downloads' },
   { name: 'FAQs', path: '/faqs' },
@@ -47,8 +48,10 @@ const Navbar = () => {
       className={twMerge(
         "fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl rounded-full",
         "border border-white/15 backdrop-blur-xl shadow-xl shadow-black/20 z-50",
-        "transition-colors duration-300",
-        scrolled ? "bg-mnit-blue/70" : "bg-mnit-blue/70"
+        "bg-gradient-to-r transition-all duration-300",
+        scrolled
+          ? "from-mnit-navy/95 via-mnit-blue/90 to-mnit-navy/95"
+          : "from-mnit-navy/80 via-mnit-blue/70 to-mnit-navy/80"
       )}
     >
       <div className="w-full mx-auto px-4 sm:px-6">
@@ -58,7 +61,7 @@ const Navbar = () => {
             <img
               src={nccLogo}
               alt="NCC Logo"
-              className="h-12 w-12 rounded-full object-cover border-2 border-white/20"
+              className="h-12 w-12 rounded-full object-contain bg-white p-1 border-2 border-white/20"
             />
             <div className="hidden xl:block leading-tight">
               <span className="block font-bold text-base text-white">National Cadet Corps</span>

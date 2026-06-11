@@ -19,7 +19,7 @@ const FAQs = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gray-50 py-24">
+    <div className="min-h-screen bg-mnit-tint py-24">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-12 max-w-4xl">
         
         {/* Header Section */}
@@ -36,7 +36,7 @@ const FAQs = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-5xl font-bold text-gray-900"
+            className="text-4xl md:text-5xl font-bold text-gradient-ncc"
           >
             How can we help you?
           </motion.h1>
@@ -78,7 +78,7 @@ const FAQs = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden"
+                className="bg-white rounded-2xl border border-gray-100 border-l-4 border-l-mnit-blue shadow-sm overflow-hidden"
               >
                 <button
                   onClick={() => toggleAccordion(index)}

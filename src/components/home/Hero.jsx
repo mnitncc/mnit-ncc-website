@@ -6,7 +6,7 @@ import hero2 from '../../assets/home/hero-2.jpeg';
 import hero3 from '../../assets/home/hero-3.jpg';
 import hero4 from '../../assets/home/hero-4.jpeg';
 
-const images = [hero1, hero2, hero3, hero4];
+const images = [hero2, hero1, hero3, hero4];
 
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -36,28 +36,29 @@ const Hero = () => {
 
       {/* Faded Blue Overlay */}
       <div className="absolute inset-0 bg-mnit-blue/30 mix-blend-multiply z-10"></div>
-      {/* <div className="absolute inset-0 bg-gradient-to-t from-mnit-blue via-transparent to-transparent z-10"></div> */}
+      {/* Top-down navy gradient for text legibility (strongest where the text sits) */}
+      <div className="absolute inset-0 bg-gradient-to-b from-mnit-navy/85 via-mnit-navy/40 to-transparent z-10"></div>
 
       {/* Content Container */}
-      <div className="relative z-20 h-full flex flex-col justify-end items-start text-left px-4 sm:px-6 lg:px-12 pb-12 md:pb-24 lg:pb-32 w-full">
+      <div className="relative z-20 h-full flex flex-col justify-start items-center text-center px-4 sm:px-6 lg:px-12 pt-32 md:pt-40 w-full">
         <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight mb-6 drop-shadow-lg">
+          <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight mb-6 [text-shadow:_0_2px_12px_rgb(0_0_0_/_70%)]">
             National Cadet Corps <br />
             <span className="text-mnit-gold inline-block mt-2">MNIT Jaipur</span>
           </h1>
         </motion.div>
 
         <motion.div
-           initial={{ opacity: 0, x: -30 }}
-           animate={{ opacity: 1, x: 0 }}
+           initial={{ opacity: 0, y: -30 }}
+           animate={{ opacity: 1, y: 0 }}
            transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <p className="text-lg md:text-2xl text-gray-100 mb-10 max-w-2xl leading-relaxed font-light">
-            Empowering youth with <span className="font-semibold text-white">Discipline</span>, <span className="font-semibold text-white">Leadership</span>, and a spirit of <span className="font-semibold text-white">Service</span>. 
+          <p className="text-lg md:text-2xl text-gray-100 mb-10 max-w-2xl mx-auto leading-relaxed font-light [text-shadow:_0_1px_8px_rgb(0_0_0_/_60%)]">
+            Empowering youth with <span className="font-semibold text-white">Discipline</span>, <span className="font-semibold text-white">Leadership</span>, and a spirit of <span className="font-semibold text-white">Service</span>.
             Join us to serve the nation with pride and honor.
           </p>
         </motion.div>

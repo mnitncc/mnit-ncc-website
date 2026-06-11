@@ -4,6 +4,7 @@ import MainLayout from './layouts/MainLayout';
 import Home from './pages/Home';
 import About from './pages/About';
 import Events from './pages/Events';
+import Camps from './pages/Camps';
 import FAQs from './pages/FAQs';
 import Team from './pages/Team';
 import Downloads from './pages/Downloads';
@@ -15,6 +16,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="activities" element={<Events />} />
+        <Route path="camps" element={<Camps />} />
         <Route path="cadets" element={<Team />} />
         <Route path="downloads" element={<Downloads />} />
         <Route path="faqs" element={<FAQs />} />

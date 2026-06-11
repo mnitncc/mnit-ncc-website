@@ -31,15 +31,15 @@ const SectionHeader = ({ title, subtitle }) => (
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="text-4xl font-bold text-mnit-blue mb-4"
+      className="text-4xl font-bold text-gradient-ncc mb-4"
     >
       {title}
     </motion.h2>
-    <motion.div 
+    <motion.div
       initial={{ width: 0 }}
       whileInView={{ width: 100 }}
       viewport={{ once: true }}
-      className="h-1 bg-mnit-red mx-auto rounded-full"
+      className="h-1 bg-gradient-to-r from-mnit-red to-mnit-gold mx-auto rounded-full"
     />
     {subtitle && (
       <motion.p 
@@ -75,13 +75,13 @@ const FeatureCard = ({ icon: Icon, title, children, delay }) => (
 
 const Home = () => {
   return (
-    <div className="bg-gray-50 min-h-screen">
+    <div className="bg-mnit-tint min-h-screen">
       <Hero />
 
 
 
       {/* Aims & Pledge Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24">
         <div className="w-full mx-auto px-4 sm:px-6 lg:px-12">
           <SectionHeader title="Our Vision & Values" />
           
@@ -90,7 +90,7 @@ const Home = () => {
             <motion.div 
               whileHover={{ scale: 1.01 }}
               transition={{ duration: 0.3 }}
-              className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100 relative overflow-hidden"
+              className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100 border-t-4 border-t-mnit-blue relative overflow-hidden"
             >
                <div className="relative z-10">
                  <h3 className="text-3xl font-bold text-mnit-blue flex items-center gap-3 mb-8">
@@ -223,7 +223,7 @@ const Home = () => {
       </section>
 
       {/* Photo Reel Section */}
-      <section className="py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-b from-white to-mnit-tint relative overflow-hidden">
         <div className="w-full mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
           <SectionHeader
             title="Moments in Motion"
@@ -233,8 +233,8 @@ const Home = () => {
 
         <div className="relative group">
           {/* Edge fade overlays */}
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-24 md:w-40 bg-gradient-to-r from-gray-50 to-transparent z-10"></div>
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-24 md:w-40 bg-gradient-to-l from-gray-50 to-transparent z-10"></div>
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-24 md:w-40 bg-gradient-to-r from-mnit-tint to-transparent z-10"></div>
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-24 md:w-40 bg-gradient-to-l from-mnit-tint to-transparent z-10"></div>
 
           {/* Marquee track — duplicated for seamless loop. Pauses on hover. */}
           <div

@@ -8,14 +8,24 @@ import { eventsData } from '../data/events';
 const Events = () => {
   const [selectedEvent, setSelectedEvent] = React.useState(null);
 
+  // Show most recent events first, ordered by date (and time when available).
+  const sortedEvents = React.useMemo(
+    () =>
+      [...eventsData].sort(
+        (a, b) =>
+          new Date(`${b.date} ${b.time || ''}`) - new Date(`${a.date} ${a.time || ''}`)
+      ),
+    []
+  );
+
   return (
-    <div className="min-h-screen bg-white py-20">
+    <div className="min-h-screen bg-mnit-tint py-20">
       
       {/* Header with Lines */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 mb-16">
         <div className="flex items-center gap-4">
            <div className="h-0.5 bg-mnit-blue flex-1 opacity-20"></div>
-           <h1 className="text-3xl md:text-5xl font-bold text-mnit-blue uppercase tracking-widest text-center">
+           <h1 className="text-3xl md:text-5xl font-bold text-gradient-ncc uppercase tracking-widest text-center">
              Past Events
            </h1>
            <div className="h-0.5 bg-mnit-blue flex-1 opacity-20"></div>
@@ -25,7 +35,7 @@ const Events = () => {
       {/* Events Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {eventsData.map((event) => (
+          {sortedEvents.map((event) => (
             <motion.div
               key={event.id}
               layoutId={`card-${event.id}`}
@@ -77,13 +87,26 @@ const Events = () => {
               <div 
                 className="bg-white w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl shadow-2xl pointer-events-auto flex flex-col md:flex-row overflow-hidden"
               >
-                 {/* Modal Image */}
-                 <div className="w-full md:w-1/2 h-64 md:h-auto relative">
-                    <img 
-                      src={selectedEvent.image} 
-                      alt={selectedEvent.title} 
-                      className="w-full h-full object-contain bg-gray-100" 
-                    />
+                 {/* Modal Image(s) — gallery when multiple photos exist */}
+                 <div className="w-full md:w-1/2 h-64 md:h-auto md:max-h-[90vh] relative bg-gray-100 overflow-y-auto custom-scrollbar">
+                    {(selectedEvent.images?.length > 1) ? (
+                      <div className="flex flex-col">
+                        {selectedEvent.images.map((img, i) => (
+                          <img
+                            key={i}
+                            src={img}
+                            alt={`${selectedEvent.title} photo ${i + 1}`}
+                            className="w-full h-auto object-cover"
+                          />
+                        ))}
+                      </div>
+                    ) : (
+                      <img
+                        src={selectedEvent.image}
+                        alt={selectedEvent.title}
+                        className="w-full h-full object-contain bg-gray-100"
+                      />
+                    )}
                     <div className="absolute top-4 left-4">
                         <span className="bg-white/90 backdrop-blur-md px-4 py-2 rounded-full text-mnit-blue font-bold text-sm shadow-lg">
                            {selectedEvent.date}
