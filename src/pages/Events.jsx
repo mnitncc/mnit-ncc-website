@@ -1,12 +1,14 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Calendar, MapPin, Clock } from 'lucide-react';
+import { Calendar, MapPin, Clock, Images, X } from 'lucide-react';
 import { eventsData } from '../data/events';
 
 
 
 const Events = () => {
   const [selectedEvent, setSelectedEvent] = React.useState(null);
+  const [galleryOpen, setGalleryOpen] = React.useState(false);
+  const [lightbox, setLightbox] = React.useState(null);
 
   // Show most recent events first, ordered by date (and time when available).
   const sortedEvents = React.useMemo(
@@ -39,7 +41,7 @@ const Events = () => {
             <motion.div
               key={event.id}
               layoutId={`card-${event.id}`}
-              onClick={() => setSelectedEvent(event)}
+              onClick={() => { setSelectedEvent(event); setGalleryOpen(false); }}
               whileHover={{ y: -10 }}
               className="group cursor-pointer"
             >
@@ -87,26 +89,13 @@ const Events = () => {
               <div 
                 className="bg-white w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl shadow-2xl pointer-events-auto flex flex-col md:flex-row overflow-hidden"
               >
-                 {/* Modal Image(s) — gallery when multiple photos exist */}
-                 <div className="w-full md:w-1/2 h-64 md:h-auto md:max-h-[90vh] relative bg-gray-100 overflow-y-auto custom-scrollbar">
-                    {(selectedEvent.images?.length > 1) ? (
-                      <div className="flex flex-col">
-                        {selectedEvent.images.map((img, i) => (
-                          <img
-                            key={i}
-                            src={img}
-                            alt={`${selectedEvent.title} photo ${i + 1}`}
-                            className="w-full h-auto object-cover"
-                          />
-                        ))}
-                      </div>
-                    ) : (
-                      <img
-                        src={selectedEvent.image}
-                        alt={selectedEvent.title}
-                        className="w-full h-full object-contain bg-gray-100"
-                      />
-                    )}
+                 {/* Modal cover image */}
+                 <div className="w-full md:w-1/2 h-64 md:h-auto relative">
+                    <img
+                      src={selectedEvent.image}
+                      alt={selectedEvent.title}
+                      className="w-full h-full object-contain bg-gray-100"
+                    />
                     <div className="absolute top-4 left-4">
                         <span className="bg-white/90 backdrop-blur-md px-4 py-2 rounded-full text-mnit-blue font-bold text-sm shadow-lg">
                            {selectedEvent.date}
@@ -132,6 +121,22 @@ const Events = () => {
                         {selectedEvent.location}
                     </div>
 
+                    {selectedEvent.images && selectedEvent.images.length > 1 && (
+                      <button
+                         type="button"
+                         onClick={() => setGalleryOpen(true)}
+                         className="w-full flex items-center justify-between gap-3 mb-8 px-5 py-4 rounded-xl border border-mnit-blue/20 bg-mnit-tint hover:bg-mnit-blue/10 transition-colors group/gallery"
+                      >
+                         <span className="flex items-center gap-3 text-mnit-blue font-bold">
+                            <Images className="w-5 h-5" />
+                            Photo Gallery
+                         </span>
+                         <span className="text-sm text-gray-500 group-hover/gallery:text-mnit-blue transition-colors">
+                            {selectedEvent.images.length} Photos →
+                         </span>
+                      </button>
+                    )}
+
                     <div className="space-y-4 text-gray-600 leading-relaxed overflow-y-auto max-h-[40vh] pr-2 custom-scrollbar">
                          {selectedEvent.description.map((p, i) => (
                              <p key={i}>{p}</p>
@@ -150,6 +155,81 @@ const Events = () => {
               </div>
             </motion.div>
           </>
+        )}
+      </AnimatePresence>
+
+      {/* Photo Gallery overlay (grid of all event photos) */}
+      <AnimatePresence>
+        {galleryOpen && selectedEvent && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setGalleryOpen(false)}
+              className="fixed inset-0 bg-black/70 backdrop-blur-sm z-[55]"
+            />
+            <motion.div
+              initial={{ opacity: 0, scale: 0.96 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.96 }}
+              className="fixed inset-0 z-[55] flex items-center justify-center p-4 pointer-events-none"
+            >
+              <div className="bg-white w-full max-w-5xl max-h-[90vh] rounded-3xl shadow-2xl pointer-events-auto flex flex-col overflow-hidden">
+                <div className="flex items-center justify-between px-6 py-5 border-b border-gray-100">
+                  <h2 className="text-xl font-bold text-mnit-blue flex items-center gap-3">
+                    <Images className="w-5 h-5" />
+                    {selectedEvent.title} — Photo Gallery
+                  </h2>
+                  <button
+                    onClick={() => setGalleryOpen(false)}
+                    className="p-2 rounded-full hover:bg-gray-100 transition-colors"
+                  >
+                    <span className="sr-only">Close gallery</span>
+                    <X className="w-6 h-6 text-gray-500" />
+                  </button>
+                </div>
+                <div className="overflow-y-auto p-6 custom-scrollbar">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+                    {selectedEvent.images.map((src, i) => (
+                      <button
+                        key={i}
+                        type="button"
+                        onClick={() => setLightbox(src)}
+                        className="relative aspect-square overflow-hidden rounded-xl border border-gray-100 group/thumb"
+                      >
+                        <img
+                          src={src}
+                          alt={`${selectedEvent.title} photo ${i + 1}`}
+                          loading="lazy"
+                          className="h-full w-full object-cover transition-transform duration-300 group-hover/thumb:scale-110"
+                        />
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+
+      {/* Lightbox for full-size gallery photos */}
+      <AnimatePresence>
+        {lightbox && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setLightbox(null)}
+            className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm cursor-zoom-out"
+          >
+            <img
+              src={lightbox}
+              alt="Event photo"
+              className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
+            />
+          </motion.div>
         )}
       </AnimatePresence>
     </div>
