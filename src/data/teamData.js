@@ -1,6 +1,7 @@
 import Director from '../assets/team/director.jpg';
 import dean from '../assets/team/dean.png';
 import facultyCoordinator from '../assets/team/faculty-coordinator.jpeg';
+import ankit from '../assets/team/ankit.jpeg';
 
 import ashish from '../assets/team/cadets/ashish.jpeg';
 import bhargoDeol from '../assets/team/cadets/bhargo-deol.jpeg';
@@ -37,6 +38,14 @@ export const teamData = {
       name: "Dr. Anup Malik",
       role: "Faculty Coordinator",
       image: facultyCoordinator,
+    },
+  ],
+  office: [
+    {
+      id: 1,
+      name: "Ankit",
+      role: "Office Assistant",
+      image: ankit,
     },
   ],
   cadets: [
