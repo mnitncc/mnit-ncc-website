@@ -47,7 +47,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight mb-6 [text-shadow:_0_2px_12px_rgb(0_0_0_/_70%)]">
-             Cadet Corps <br />
+            National Cadet Corps <br />
             <span className="text-mnit-gold inline-block mt-2">MNIT Jaipur</span>
           </h1>
         </motion.div>
