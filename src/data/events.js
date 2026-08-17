@@ -6,8 +6,141 @@ import plantation2026_1 from '../assets/events/plantation-2026-1.jpeg';
 import plantation2026_2 from '../assets/events/plantation-2026-2.jpeg';
 import plantation2026_3 from '../assets/events/plantation-2026-3.jpeg';
 import hero2 from '../assets/home/hero-2.jpeg';
+import shaheedUdhamSingh1 from '../assets/events/august-2026/shaheed-udham-singh-1.jpg';
+import shaheedUdhamSingh2 from '../assets/events/august-2026/shaheed-udham-singh-2.jpg';
+import shaheedUdhamSingh3 from '../assets/events/august-2026/shaheed-udham-singh-3.jpg';
+import independenceDay2026_1 from '../assets/events/august-2026/independence-day-2026-1.jpg';
+import independenceDay2026_2 from '../assets/events/august-2026/independence-day-2026-2.jpg';
+import independenceDay2026_3 from '../assets/events/august-2026/independence-day-2026-3.jpg';
+import independenceDay2026_4 from '../assets/events/august-2026/independence-day-2026-4.jpg';
+import plantationAug2026_1 from '../assets/events/august-2026/plantation-aug-2026-1.jpg';
+import plantationAug2026_2 from '../assets/events/august-2026/plantation-aug-2026-2.jpg';
+import plantationAug2026_3 from '../assets/events/august-2026/plantation-aug-2026-3.jpg';
+import plantationAug2026_4 from '../assets/events/august-2026/plantation-aug-2026-4.jpg';
+import rangoliCompetition2026_1 from '../assets/events/august-2026/rangoli-competition-2026-1.jpg';
+import rangoliCompetition2026_2 from '../assets/events/august-2026/rangoli-competition-2026-2.jpg';
+import rangoliCompetition2026_3 from '../assets/events/august-2026/rangoli-competition-2026-3.jpg';
+import rangoliCompetition2026_4 from '../assets/events/august-2026/rangoli-competition-2026-4.jpg';
+import tirangaYatra2026_1 from '../assets/events/august-2026/tiranga-yatra-2026-1.jpg';
+import tirangaYatra2026_2 from '../assets/events/august-2026/tiranga-yatra-2026-2.jpg';
+import trekking2026_1 from '../assets/events/august-2026/trekking-2026-1.jpg';
+import trekking2026_3 from '../assets/events/august-2026/trekking-2026-3.jpg';
+import trekking2026_4 from '../assets/events/august-2026/trekking-2026-4.jpg';
+import trekking2026_5 from '../assets/events/august-2026/trekking-2026-5.jpg';
+import trekking2026_6 from '../assets/events/august-2026/trekking-2026-6.jpg';
+import trekking2026_7 from '../assets/events/august-2026/trekking-2026-7.jpg';
+import trekking2026_8 from '../assets/events/august-2026/trekking-2026-8.jpg';
+import trekking2026_9 from '../assets/events/august-2026/trekking-2026-9.jpg';
 
 export const eventsData = [
+  {
+    id: 12,
+    title: "NCC Trekking Activity",
+    date: "August 16, 2026",
+    time: "06:00",
+    location: "Ban Ki Ghati to Gatla Ji Mandir, Jaipur",
+    image: trekking2026_1,
+    images: [
+      trekking2026_1,
+      trekking2026_3,
+      trekking2026_4,
+      trekking2026_5,
+      trekking2026_6,
+      trekking2026_7,
+      trekking2026_8,
+      trekking2026_9
+    ],
+    description: [
+      "On 16 August 2026, eleven NCC cadets along with their ANO, Dr. Anup Malik, went for a trekking activity. The trek started from Ban Ki Ghati near Hanuman Mandir and concluded at Gatla Ji Mandir.",
+      "The cadets completed the trek together while enjoying the natural surroundings and supporting one another throughout the route. The activity provided them with an opportunity to improve their endurance, teamwork, discipline and confidence.",
+      "The trek was an enjoyable and memorable experience for the cadets and helped strengthen their team spirit and unity."
+    ]
+  },
+  {
+    id: 11,
+    title: "Independence Day Parade",
+    date: "August 15, 2026",
+    time: "08:00",
+    location: "MNIT Jaipur",
+    image: independenceDay2026_2,
+    images: [
+      independenceDay2026_1,
+      independenceDay2026_2,
+      independenceDay2026_3,
+      independenceDay2026_4
+    ],
+    description: [
+      "On 15 August 2026, thirteen NCC cadets from Malaviya National Institute of Technology (MNIT), Jaipur, took part in the Independence Day Parade held at MNIT Jaipur.",
+      "The cadets participated in the parade with discipline and enthusiasm, adding to the spirit of the Independence Day celebrations.",
+      "The parade was a proud experience for the cadets and provided an opportunity to showcase discipline, unity and patriotism."
+    ]
+  },
+  {
+    id: 10,
+    title: "Shaheed Udham Singh Commemoration",
+    date: "August 14, 2026",
+    time: "14:00",
+    location: "Constitution Club of Rajasthan, Jaipur",
+    image: shaheedUdhamSingh1,
+    images: [shaheedUdhamSingh1, shaheedUdhamSingh2, shaheedUdhamSingh3],
+    description: [
+      "On 14 August 2026, six Senior Division cadets from MNIT Jaipur attended a commemorative event honoring Shaheed Udham Singh at the Constitution Club of Rajasthan, Jaipur.",
+      "The ceremony was graced by the Deputy Chief Minister of Rajasthan, Hon'ble Diya Kumari, as the Chief Guest.",
+      "The event served as a profound source of inspiration for the cadets, reinforcing their commitment to national service and patriotic duty."
+    ]
+  },
+  {
+    id: 9,
+    title: "Rangoli Competition",
+    date: "August 14, 2026",
+    time: "10:00",
+    location: "MNIT Jaipur",
+    image: rangoliCompetition2026_1,
+    images: [
+      rangoliCompetition2026_1,
+      rangoliCompetition2026_2,
+      rangoliCompetition2026_3,
+      rangoliCompetition2026_4
+    ],
+    description: [
+      "MNIT Jaipur NCC cadets participated in a Rangoli competition on 14 August 2026 organized to celebrate India's 80th Independence Day.",
+      "Designing themed artworks, the cadets demonstrated exceptional teamwork, creativity, and patriotic spirit throughout the event."
+    ]
+  },
+  {
+    id: 8,
+    title: "Plantation Drive",
+    date: "August 13, 2026",
+    time: "17:30",
+    location: "NCC Office, MNIT Jaipur",
+    image: plantationAug2026_1,
+    images: [
+      plantationAug2026_1,
+      plantationAug2026_2,
+      plantationAug2026_3,
+      plantationAug2026_4
+    ],
+    description: [
+      "On 13 August 2026, eleven NCC cadets from Malaviya National Institute of Technology (MNIT), Jaipur, participated in a plantation drive held at the NCC Office, MNIT Jaipur.",
+      "The cadets actively planted saplings and contributed towards maintaining a greener and cleaner campus.",
+      "The activity promoted awareness about environmental conservation and encouraged the cadets to take responsibility for their surroundings. The drive also reflected the NCC values of discipline, teamwork and social responsibility."
+    ]
+  },
+  {
+    id: 7,
+    title: "Har Ghar Tiranga Yatra",
+    date: "August 9, 2026",
+    time: "09:00",
+    location: "Albert Hall to Badi Chaupar, Jaipur",
+    image: tirangaYatra2026_1,
+    images: [tirangaYatra2026_1, tirangaYatra2026_2],
+    description: [
+      "Seven NCC cadets from Malaviya National Institute of Technology (MNIT), Jaipur, participated in the Har Ghar Tiranga Yatra held on Sunday, 9 August 2026, in Jaipur.",
+      "The yatra started from Albert Hall and continued towards Badi Chaupar. The programme was attended by Shri J. P. Nadda, Union Minister, and Shri Bhajan Lal Sharma, Chief Minister of Rajasthan.",
+      "The cadets participated in the yatra along with a large gathering of people carrying the National Flag. The event created a patriotic atmosphere and spread the message of national pride and unity.",
+      "It also gave the cadets an opportunity to represent NCC in a large public programme while displaying discipline, unity and patriotic spirit."
+    ]
+  },
   {
     id: 6,
     title: "Plantation Drive",
