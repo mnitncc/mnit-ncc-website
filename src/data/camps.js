@@ -46,6 +46,16 @@ import pretsc8 from '../assets/camps/pretsc-8.webp';
 import pretsc9 from '../assets/camps/pretsc-9.webp';
 import pretsc10 from '../assets/camps/pretsc-10.webp';
 
+// --- IGC TSC: Inter-Group Competition Thal Sainik Camp images ---
+import igctsc1 from '../assets/camps/igc-tsc-1.webp';
+import igctsc2 from '../assets/camps/igc-tsc-2.webp';
+import igctsc3 from '../assets/camps/igc-tsc-3.webp';
+import igctsc4 from '../assets/camps/igc-tsc-4.webp';
+import igctsc5 from '../assets/camps/igc-tsc-5.webp';
+import igctsc6 from '../assets/camps/igc-tsc-6.webp';
+import igctsc7 from '../assets/camps/igc-tsc-7.webp';
+import igctsc8 from '../assets/camps/igc-tsc-8.webp';
+
 export const campsData = [
   {
     id: 1,
@@ -84,7 +94,34 @@ export const campsData = [
     description: [
       "Pre-TSC-1 was held at the NCC Complex under 3 RAJ Naval over 10 days from 1 to 10 June 2026, with 187 cadets (91 SW + 96 SD) drawn from 8 units. MNIT was represented by two senior-wing cadets, Harshita and Kaustubhi.",
       "Events included health & hygiene reading, judging distance and field craft, obstacle training and firing — Harshita competed in firing and Kaustubhi in map reading. Cadets also attended a night-sky observation session, viewing Jupiter and its moons through a telescope.",
-      "Both MNIT cadets performed well and were selected for Pre-TSC-2, held at the NCC Complex under 1 RAJ Armed over 10 days from 11 to 20 June 2026, with 88 cadets (40 SW + 48 SD) from 8 units, again featuring events in health & hygiene, field craft, obstacle training and firing."
+      "Both MNIT cadets performed well and were selected for Pre-TSC-2, held at the NCC Complex under 1 RAJ Armed over 10 days from 11 to 20 June 2026, with 88 cadets (40 SW + 48 SD) from 8 units, again featuring events in health & hygiene, field craft, obstacle training and firing.",
+      "Achievement: Harshita was subsequently selected for Pre TSC-3, marking a significant achievement for MNIT Jaipur NCC."
+    ]
+  },
+  {
+    id: 4,
+    title: "Inter-Group Competition TSC-I (IGC TSC-I)",
+    date: "July 27 – August 5, 2026",
+    location: "Modi Law College, Kota, Rajasthan",
+    image: igctsc1,
+    gallery: [igctsc1, igctsc2, igctsc3, igctsc4, igctsc5, igctsc6, igctsc7, igctsc8],
+    description: [
+      "Following her successful completion of Pre TSC-I and Pre TSC-II, Cadet Harshita of MNIT Jaipur NCC earned selection for the prestigious Inter-Group Competition (IGC) TSC camps.",
+      "IGC TSC-I was held at Modi Law College, Kota, under the supervision of 14 Raj BN NCC, Kota, bringing together 69 selected cadets across the Jodhpur, Jaipur, Kota, and Udaipur groups. The training and evaluation covered rigorous disciplines including Health & Hygiene, Map Reading, Judging Distance & Field Craft, Obstacle Training, and .22 Rifle Firing (Snap & Application).",
+      "Harshita delivered an outstanding performance, securing 2nd position in IGC TSC-I."
+    ]
+  },
+  {
+    id: 5,
+    title: "Inter-Group Competition TSC-II (IGC TSC-II)",
+    date: "August 6 – 15, 2026",
+    location: "Kota, Rajasthan",
+    image: igctsc3,
+    gallery: [igctsc3, igctsc2, igctsc1, igctsc4, igctsc5, igctsc6, igctsc7, igctsc8],
+    description: [
+      "IGC TSC-II saw Harshita competing among the shortlisted 28 cadets from the IGC TSC-I phase. Through intensive training in Health & Hygiene, Map Reading, Judging Distance & Field Craft, Obstacle Training, and .22 Rifle Firing, cadets were evaluated for their overall competence and readiness.",
+      "Maintaining her exceptional form, Harshita once again secured the 2nd position in IGC TSC-II, demonstrating consistent excellence across both phases.",
+      "Through her remarkable achievements in IGC TSC-I and IGC TSC-II, Harshita earned selection to represent the Rajasthan Directorate at the Thal Sainik Camp (TSC) in Delhi, bringing great pride to MNIT Jaipur NCC."
     ]
   }
 ];

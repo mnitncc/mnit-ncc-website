@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MapPin, Tent, Images, X } from 'lucide-react';
+import { Images, MapPin, Tent } from 'lucide-react';
 import { campsData } from '../data/camps';
 
 const Camps = () => {
