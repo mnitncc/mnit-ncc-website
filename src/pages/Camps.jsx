@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Images, MapPin, Tent } from 'lucide-react';
 import { campsData } from '../data/camps';
 
+const MotionDiv = motion.div;
+
 const Camps = () => {
   const [selectedCamp, setSelectedCamp] = React.useState(null);
   const [galleryOpen, setGalleryOpen] = React.useState(false);
@@ -35,7 +37,7 @@ const Camps = () => {
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {campsData.map((camp) => (
-              <motion.div
+              <MotionDiv
                 key={camp.id}
                 layoutId={`camp-card-${camp.id}`}
                 onClick={() => { setSelectedCamp(camp); setGalleryOpen(false); }}
@@ -63,7 +65,7 @@ const Camps = () => {
                    <h3 className="text-lg font-bold text-mnit-blue line-clamp-1">{camp.title}</h3>
                    <p className="text-sm text-gray-500">{camp.location}</p>
                 </div>
-              </motion.div>
+              </MotionDiv>
             ))}
           </div>
         )}
@@ -73,14 +75,14 @@ const Camps = () => {
       <AnimatePresence>
         {selectedCamp && (
           <>
-            <motion.div
+            <MotionDiv
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedCamp(null)}
               className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50"
             />
-            <motion.div
+            <MotionDiv
               layoutId={`camp-card-${selectedCamp.id}`}
               className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none"
             >
@@ -151,7 +153,7 @@ const Camps = () => {
                     </div>
                  </div>
               </div>
-            </motion.div>
+            </MotionDiv>
           </>
         )}
       </AnimatePresence>
@@ -160,14 +162,14 @@ const Camps = () => {
       <AnimatePresence>
         {galleryOpen && selectedCamp && (
           <>
-            <motion.div
+            <MotionDiv
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setGalleryOpen(false)}
               className="fixed inset-0 bg-black/70 backdrop-blur-sm z-[55]"
             />
-            <motion.div
+            <MotionDiv
               initial={{ opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.96 }}
@@ -207,7 +209,7 @@ const Camps = () => {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </MotionDiv>
           </>
         )}
       </AnimatePresence>
@@ -215,7 +217,7 @@ const Camps = () => {
       {/* Lightbox for full-size gallery photos */}
       <AnimatePresence>
         {lightbox && (
-          <motion.div
+          <MotionDiv
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -227,7 +229,7 @@ const Camps = () => {
               alt="Camp photo"
               className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
             />
-          </motion.div>
+          </MotionDiv>
         )}
       </AnimatePresence>
     </div>
