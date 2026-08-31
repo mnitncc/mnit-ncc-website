@@ -129,5 +129,16 @@ export const campsData = [
       "Maintaining her exceptional form, Harshita once again secured the 2nd position in IGC TSC-II, demonstrating consistent excellence across both phases.",
       "Through her remarkable achievements in IGC TSC-I and IGC TSC-II, Harshita earned selection to represent the Rajasthan Directorate at the Thal Sainik Camp (TSC) in Delhi, bringing great pride to MNIT Jaipur NCC."
     ]
+  },
+  {
+    id: 6,
+    title: "TSC-5 (AITSC KITTING AND LAUNCHING CAMP)",
+    date: "August 21 - 31, 2026",
+    location: "Kota, Rajasthan",
+    image: igctsc3,
+    // gallery: [igctsc3, igctsc2, igctsc1, igctsc4, igctsc5, igctsc6, igctsc7],
+    description: [
+      "Demonstrating exceptional standard of marksmanship and tactical readiness across all selection stages, Sergeant Harshita of the MNIT Jaipur NCC unit successfully earned her selection in the Firing discipline. She will represent the NCC Rajasthan Directorate at the prestigious All India Thal Sainik Camp (AITSC) in New Delhi."]
+
   }
 ];
