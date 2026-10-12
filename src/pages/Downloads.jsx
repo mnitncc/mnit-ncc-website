@@ -27,7 +27,7 @@ const Downloads = () => {
   );
 
   return (
-    <div className="min-h-screen py-20">
+    <div className="min-h-screen bg-mnit-tint py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12">
         {/* Header */}
         <div className="text-center mb-12">
@@ -75,7 +75,7 @@ const Downloads = () => {
             placeholder="Search downloads..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            className="w-full pl-11 pr-4 py-3 rounded-2xl bg-white/60 backdrop-blur-xl border-2 border-white/60 shadow-sm focus:border-mnit-blue focus:ring-4 focus:ring-mnit-blue/10 transition-all outline-none"
+            className="w-full pl-11 pr-4 py-3 rounded-2xl border-2 border-gray-100 shadow-sm focus:border-mnit-blue focus:ring-4 focus:ring-mnit-blue/10 transition-all outline-none"
           />
           <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
         </motion.div>
@@ -85,7 +85,7 @@ const Downloads = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="glass-card rounded-2xl border-t-4 border-t-mnit-blue overflow-hidden"
+          className="bg-white rounded-2xl shadow-lg border border-gray-100 border-t-4 border-t-mnit-blue overflow-hidden"
         >
           {filtered.length === 0 ? (
             <div className="p-12 text-center text-gray-500">

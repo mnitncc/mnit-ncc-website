@@ -27,7 +27,7 @@ const Team = () => {
   };
 
   return (
-    <div className="w-full min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+    <div className="w-full min-h-screen bg-mnit-tint py-12 px-4 sm:px-6 lg:px-8">
       {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -45,7 +45,7 @@ const Team = () => {
 
       {/* Tab Switcher */}
       <div className="flex justify-center mb-12">
-        <div className="inline-flex glass-card rounded-full p-1.5 gap-1">
+        <div className="inline-flex bg-white rounded-full shadow-md p-1.5 gap-1">
           {tabs.map((tab) => (
             <button
               key={tab.id}
@@ -82,7 +82,7 @@ const Team = () => {
               <div className="flex justify-center">
                 <motion.div
                   variants={itemVariants}
-                  className="glass-card rounded-2xl overflow-hidden max-w-sm w-full transform transition hover:scale-105 duration-300 border-t-4 border-mnit-blue"
+                  className="bg-white rounded-2xl shadow-xl overflow-hidden max-w-sm w-full transform transition hover:scale-105 duration-300 border-t-4 border-mnit-blue"
                 >
                   <div className="h-64 overflow-hidden bg-gray-100 flex items-center justify-center">
                     <img
@@ -123,7 +123,7 @@ const Team = () => {
                   <motion.div
                     key={member.id}
                     variants={itemVariants}
-                    className="glass-card rounded-xl overflow-hidden w-full max-w-xs transform transition hover:-translate-y-2 duration-300 border-t-4 border-mnit-blue"
+                    className="bg-white rounded-xl shadow-lg overflow-hidden w-full max-w-xs transform transition hover:-translate-y-2 duration-300 border-t-4 border-mnit-blue"
                   >
                     <div className="aspect-[3/4] overflow-hidden bg-gray-100">
                       <img
@@ -164,7 +164,7 @@ const Team = () => {
                   <motion.div
                     key={member.id}
                     variants={itemVariants}
-                    className="glass-card rounded-xl overflow-hidden w-full max-w-xs transform transition hover:-translate-y-2 duration-300 border-t-4 border-mnit-blue"
+                    className="bg-white rounded-xl shadow-lg overflow-hidden w-full max-w-xs transform transition hover:-translate-y-2 duration-300 border-t-4 border-mnit-blue"
                   >
                     <div className="aspect-[3/4] overflow-hidden bg-gray-100">
                       <img
@@ -215,7 +215,7 @@ const Team = () => {
                   <motion.div
                     key={cadet.id}
                     variants={itemVariants}
-                    className="glass-card rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 w-full max-w-xs border-t-4 border-mnit-blue"
+                    className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 w-full max-w-xs border-t-4 border-mnit-blue"
                   >
                     <div className="h-72 md:h-80 overflow-hidden bg-gray-100 flex items-center justify-center">
                       <img

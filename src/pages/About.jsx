@@ -6,7 +6,7 @@ import armyDayImg from '../assets/events/army-day-event.jpg';
 
 const About = () => {
     return (
-        <div className="w-full py-20">
+        <div className="w-full bg-mnit-tint py-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
                 <motion.div 
                     initial={{ opacity: 0, y: 30 }}

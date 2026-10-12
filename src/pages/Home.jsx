@@ -61,7 +61,7 @@ const FeatureCard = ({ icon: Icon, title, children, delay }) => (
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ duration: 0.5, delay }}
-    className="glass-card p-8 rounded-2xl hover:shadow-2xl transition-all duration-300 group"
+    className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group"
   >
     <div className="w-14 h-14 bg-mnit-blue/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-mnit-blue group-hover:text-white transition-colors duration-300">
       <Icon className="w-8 h-8 text-mnit-blue group-hover:text-white transition-colors duration-300" />
@@ -75,7 +75,7 @@ const FeatureCard = ({ icon: Icon, title, children, delay }) => (
 
 const Home = () => {
   return (
-    <div className="min-h-screen">
+    <div className="bg-mnit-tint min-h-screen">
       <Hero />
 
 
@@ -90,7 +90,7 @@ const Home = () => {
             <motion.div 
               whileHover={{ scale: 1.01 }}
               transition={{ duration: 0.3 }}
-              className="glass-card rounded-3xl p-8 md:p-12 border-t-4 border-t-mnit-blue relative overflow-hidden"
+              className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100 border-t-4 border-t-mnit-blue relative overflow-hidden"
             >
                <div className="relative z-10">
                  <h3 className="text-3xl font-bold text-mnit-blue flex items-center gap-3 mb-8">
@@ -164,7 +164,7 @@ const Home = () => {
       </section>
 
       {/* NCC Song Section */}
-      <section className="py-24 bg-white/50 backdrop-blur-xl relative overflow-hidden">
+      <section className="py-24 bg-white relative overflow-hidden">
         {/* Decorative Background Elements */}
         <div className="absolute top-0 left-0 w-full h-full opacity-5 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
         <div className="absolute -top-40 -right-40 w-96 h-96 bg-mnit-blue/5 rounded-full blur-[100px]"></div>
@@ -223,7 +223,7 @@ const Home = () => {
       </section>
 
       {/* Photo Reel Section */}
-      <section className="py-24 bg-gradient-to-b from-white/60 to-transparent relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-b from-white to-mnit-tint relative overflow-hidden">
         <div className="w-full mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
           <SectionHeader
             title="Moments in Motion"
