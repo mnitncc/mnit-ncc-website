@@ -3,8 +3,18 @@
 @tailwind utilities;
 
 @layer base {
+  /* Soft NCC-coloured wash behind every page. The frosted surfaces above need
+     something with variation to blur, otherwise the glass effect is invisible
+     against a flat background. Pinned to the viewport so it stays put while
+     the page scrolls. */
   body {
     @apply antialiased text-gray-900 bg-mnit-tint;
+    background-image:
+      radial-gradient(45rem 45rem at 10% -10%, rgba(22, 25, 130, 0.20), transparent 60%),
+      radial-gradient(38rem 38rem at 92% 4%, rgba(37, 99, 235, 0.16), transparent 62%),
+      radial-gradient(42rem 42rem at 82% 88%, rgba(196, 30, 58, 0.14), transparent 62%),
+      radial-gradient(34rem 34rem at 8% 84%, rgba(255, 215, 0, 0.14), transparent 60%);
+    background-attachment: fixed;
   }
 }
 
@@ -17,6 +27,17 @@
   /* Short red → gold underline accent under headings */
   .ncc-accent-bar {
     @apply h-1 w-24 rounded bg-gradient-to-r from-mnit-red to-mnit-gold;
+  }
+
+  /* Frosted surface for content cards. Uses a ring rather than a border so
+     cards keep their own coloured accent borders (border-t-4 etc.). */
+  .glass-card {
+    @apply bg-white/60 shadow-lg shadow-mnit-navy/5 ring-1 ring-white/50 backdrop-blur-xl;
+  }
+
+  /* Heavier frost for modals and overlays, which sit on a dimmed backdrop. */
+  .glass-panel {
+    @apply bg-white/85 shadow-2xl shadow-mnit-navy/25 ring-1 ring-white/50 backdrop-blur-2xl;
   }
 }
 

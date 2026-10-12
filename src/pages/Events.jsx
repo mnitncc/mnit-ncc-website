@@ -21,7 +21,7 @@ const Events = () => {
   );
 
   return (
-    <div className="min-h-screen bg-mnit-tint py-20">
+    <div className="min-h-screen py-20">
       
       {/* Header with Lines */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 mb-16">
@@ -87,7 +87,7 @@ const Events = () => {
               className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none"
             >
               <div 
-                className="bg-white w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl shadow-2xl pointer-events-auto flex flex-col md:flex-row overflow-hidden"
+                className="glass-panel w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl pointer-events-auto flex flex-col md:flex-row overflow-hidden"
               >
                  {/* Modal cover image */}
                  <div className="w-full md:w-1/2 h-64 md:h-auto relative">
@@ -104,7 +104,7 @@ const Events = () => {
                  </div>
 
                  {/* Modal Content */}
-                 <div className="w-full md:w-1/2 p-8 md:p-12 bg-white relative">
+                 <div className="w-full md:w-1/2 p-8 md:p-12 relative">
                     <button 
                         onClick={() => setSelectedEvent(null)}
                         className="absolute top-6 right-6 p-2 rounded-full hover:bg-gray-100 transition-colors"
@@ -175,7 +175,7 @@ const Events = () => {
               exit={{ opacity: 0, scale: 0.96 }}
               className="fixed inset-0 z-[55] flex items-center justify-center p-4 pointer-events-none"
             >
-              <div className="bg-white w-full max-w-5xl max-h-[90vh] rounded-3xl shadow-2xl pointer-events-auto flex flex-col overflow-hidden">
+              <div className="glass-panel w-full max-w-5xl max-h-[90vh] rounded-3xl pointer-events-auto flex flex-col overflow-hidden">
                 <div className="flex items-center justify-between px-6 py-5 border-b border-gray-100">
                   <h2 className="text-xl font-bold text-mnit-blue flex items-center gap-3">
                     <Images className="w-5 h-5" />
