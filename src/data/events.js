@@ -31,8 +31,70 @@ import trekking2026_6 from '../assets/events/august-2026/trekking-2026-6.jpg';
 import trekking2026_7 from '../assets/events/august-2026/trekking-2026-7.jpg';
 import trekking2026_8 from '../assets/events/august-2026/trekking-2026-8.jpg';
 import trekking2026_9 from '../assets/events/august-2026/trekking-2026-9.jpg';
+import swachhataAbhiyan2026_1 from '../assets/events/october-2026/swachhata-abhiyan-2026-1.jpg';
+import swachhataAbhiyan2026_2 from '../assets/events/october-2026/swachhata-abhiyan-2026-2.jpg';
+import swachhataAbhiyan2026_3 from '../assets/events/october-2026/swachhata-abhiyan-2026-3.jpg';
+import swachhataAbhiyan2026_4 from '../assets/events/october-2026/swachhata-abhiyan-2026-4.jpg';
+import swachhataAbhiyan2026_5 from '../assets/events/october-2026/swachhata-abhiyan-2026-5.jpg';
+import saanValleyTrek2026_1 from '../assets/events/october-2026/saan-valley-trek-2026-1.jpg';
+import saanValleyTrek2026_2 from '../assets/events/october-2026/saan-valley-trek-2026-2.jpg';
+import saanValleyTrek2026_3 from '../assets/events/october-2026/saan-valley-trek-2026-3.jpg';
+import saanValleyTrek2026_4 from '../assets/events/october-2026/saan-valley-trek-2026-4.jpg';
+import saanValleyTrek2026_5 from '../assets/events/october-2026/saan-valley-trek-2026-5.jpg';
+import saanValleyTrek2026_6 from '../assets/events/october-2026/saan-valley-trek-2026-6.jpg';
+import saanValleyTrek2026_7 from '../assets/events/october-2026/saan-valley-trek-2026-7.jpg';
+import saanValleyTrek2026_8 from '../assets/events/october-2026/saan-valley-trek-2026-8.jpg';
+import saanValleyTrek2026_9 from '../assets/events/october-2026/saan-valley-trek-2026-9.jpg';
+import saanValleyTrek2026_10 from '../assets/events/october-2026/saan-valley-trek-2026-10.jpg';
+import saanValleyTrek2026_11 from '../assets/events/october-2026/saan-valley-trek-2026-11.jpg';
 
 export const eventsData = [
+  {
+    id: 14,
+    title: "Saan Valley Trekking Activity",
+    date: "October 3, 2026",
+    time: "06:00",
+    location: "Saan Valley, Jaipur",
+    image: saanValleyTrek2026_1,
+    images: [
+      saanValleyTrek2026_1,
+      saanValleyTrek2026_2,
+      saanValleyTrek2026_3,
+      saanValleyTrek2026_4,
+      saanValleyTrek2026_5,
+      saanValleyTrek2026_6,
+      saanValleyTrek2026_7,
+      saanValleyTrek2026_8,
+      saanValleyTrek2026_9,
+      saanValleyTrek2026_10,
+      saanValleyTrek2026_11
+    ],
+    description: [
+      "On 3 October 2026, first and second year NCC cadets of Malaviya National Institute of Technology (MNIT), Jaipur, along with their ANO, took part in a trekking activity at Saan Valley. The trek was the first activity undertaken after the enrolment of the new batch of 2026.",
+      "The cadets set out early in the morning and ascended the hill trail together, encouraging and supporting one another along the route before reaching the top, where they were rewarded with a panoramic view of the valley.",
+      "Being the first outing for the newly enrolled cadets, the trek gave them an opportunity to get to know their seniors and settle into the unit. The activity helped the cadets build endurance, teamwork and confidence, and proved to be an enjoyable and memorable experience that strengthened their team spirit."
+    ]
+  },
+  {
+    id: 13,
+    title: "Swachhata Abhiyan",
+    date: "October 1, 2026",
+    time: "08:00",
+    location: "NCC Complex, MNIT Jaipur",
+    image: swachhataAbhiyan2026_1,
+    images: [
+      swachhataAbhiyan2026_1,
+      swachhataAbhiyan2026_2,
+      swachhataAbhiyan2026_3,
+      swachhataAbhiyan2026_4,
+      swachhataAbhiyan2026_5
+    ],
+    description: [
+      "On 1 October 2026, thirty NCC cadets of Malaviya National Institute of Technology (MNIT), Jaipur, conducted a Swachhata Abhiyan at the NCC Complex, MNIT Jaipur.",
+      "The drive began with a collective Swachhata Pledge taken by the cadets in the presence of the ANO. Following the pledge, the cadets cleaned the premises, focusing on collecting and properly disposing of plastic waste.",
+      "The event successfully promoted cleanliness, discipline and community service among the cadets, leaving the complex clean and well-maintained."
+    ]
+  },
   {
     id: 12,
     title: "NCC Trekking Activity",

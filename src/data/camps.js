@@ -62,6 +62,12 @@ import igctsc5 from '../assets/camps/igc-tsc-5.webp';
 import igctsc6 from '../assets/camps/igc-tsc-6.webp';
 import igctsc7 from '../assets/camps/igc-tsc-7.webp';
 
+// --- TSC-5: AITSC Kitting and Launching Camp images ---
+import tsc5_1 from '../assets/camps/tsc-5-1.webp';
+import tsc5_2 from '../assets/camps/tsc-5-2.webp';
+import tsc5_3 from '../assets/camps/tsc-5-3.webp';
+import tsc5_4 from '../assets/camps/tsc-5-4.webp';
+
 export const campsData = [
   {
     id: 1,
@@ -135,8 +141,8 @@ export const campsData = [
     title: "TSC-5 (AITSC KITTING AND LAUNCHING CAMP)",
     date: "August 21 - 31, 2026",
     location: "Kota, Rajasthan",
-    image: igctsc3,
-    // gallery: [igctsc3, igctsc2, igctsc1, igctsc4, igctsc5, igctsc6, igctsc7],
+    image: tsc5_1,
+    gallery: [tsc5_1, tsc5_2, tsc5_3, tsc5_4],
     description: [
       "Demonstrating exceptional standard of marksmanship and tactical readiness across all selection stages, Sergeant Harshita of the MNIT Jaipur NCC unit successfully earned her selection in the Firing discipline. She will represent the NCC Rajasthan Directorate at the prestigious All India Thal Sainik Camp (AITSC) in New Delhi."]
 
