@@ -13,7 +13,6 @@ import independenceDay from '../../assets/events/august-2026/independence-day-20
 import tirangaYatra from '../../assets/events/august-2026/tiranga-yatra-2026-1.jpg';
 import plantationDrive from '../../assets/events/august-2026/plantation-aug-2026-1.jpg';
 import swachhataAbhiyan from '../../assets/events/october-2026/swachhata-abhiyan-2026-5.jpg';
-import saanValleyTrek from '../../assets/events/october-2026/saan-valley-trek-2026-10.jpg';
 import shauryaSandhya from '../../assets/events/shourya-sandhya.jpg';
 
 const images = [
@@ -25,7 +24,6 @@ const images = [
   swachhataAbhiyan,
   hero4,
   plantationDrive,
-  saanValleyTrek,
   shauryaSandhya,
 ];
 
