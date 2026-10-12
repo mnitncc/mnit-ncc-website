@@ -43,7 +43,7 @@ export const teamData = {
   office: [
     {
       id: 1,
-      name: "Ankit",
+      name: "Mr. Ankit Sharma",
       role: "Office Assistant",
       image: ankit,
     },

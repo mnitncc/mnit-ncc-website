@@ -166,11 +166,11 @@ const Team = () => {
                     variants={itemVariants}
                     className="bg-white rounded-xl shadow-lg overflow-hidden w-full max-w-xs transform transition hover:-translate-y-2 duration-300 border-t-4 border-mnit-blue"
                   >
-                    <div className="h-56 overflow-hidden bg-gray-100">
+                    <div className="aspect-[3/4] overflow-hidden bg-gray-100">
                       <img
                         src={member.image}
                         alt={member.name}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover object-top"
                       />
                     </div>
                     <div className="p-6 text-center">
