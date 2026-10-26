@@ -68,6 +68,10 @@ import tsc5_2 from '../assets/camps/tsc-5-2.webp';
 import tsc5_3 from '../assets/camps/tsc-5-3.webp';
 import tsc5_4 from '../assets/camps/tsc-5-4.webp';
 
+// --- AITSC Delhi: All India Thal Sainik Camp (poster frame + celebration video) ---
+import aitscDelhi1 from '../assets/camps/aitsc-delhi-1.webp';
+import aitscDelhiVideo from '../assets/camps/aitsc-delhi-celebration.mp4';
+
 export const campsData = [
   {
     id: 1,
@@ -146,5 +150,20 @@ export const campsData = [
     description: [
       "Demonstrating exceptional standard of marksmanship and tactical readiness across all selection stages, Sergeant Harshita of the MNIT Jaipur NCC unit successfully earned her selection in the Firing discipline. She will represent the NCC Rajasthan Directorate at the prestigious All India Thal Sainik Camp (AITSC) in New Delhi."]
 
+  },
+  {
+    id: 7,
+    title: "All India Thal Sainik Camp (AITSC) 2026",
+    date: "August 31 – September 11, 2026",
+    location: "Delhi Cantonment, New Delhi",
+    image: aitscDelhi1,
+    video: aitscDelhiVideo,
+    gallery: [aitscDelhi1],
+    description: [
+      "Sergeant Harshita of MNIT Jaipur, 8 RAJ BN NCC, represented the Rajasthan Directorate in the Firing discipline at the prestigious All India Thal Sainik Camp (AITSC) 2026, held at Delhi Cantonment from 31 August to 11 September 2026.",
+      "Her selection followed a rigorous journey from battalion level through the Pre-TSC and Inter-Group TSC competitions, where she secured 2nd position in both IGC TSC-I and IGC TSC-II, finally earning her place in the Firing discipline (AWIDSSC). The Rajasthan contingent at this stage comprised 92 cadets (40 SW + 52 SD) from the Jaipur, Jodhpur, Kota and Udaipur groups.",
+      "AITSC 2026 brought together 1,564 cadets from 17 NCC Directorates across India. The camp featured a 1.5 km healthy run, Skill Manthan, life-skills and AI workshops, and lecturette and quiz competitions, along with a Delhi Darshan to Raj Ghat, India Gate and the National War Memorial.",
+      "Her achievement reflects consistent performance, dedication and excellence in military skills, bringing pride to MNIT Jaipur NCC and the Rajasthan Directorate."
+    ]
   }
 ];

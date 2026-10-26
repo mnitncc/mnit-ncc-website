@@ -91,11 +91,22 @@ const Camps = () => {
               >
                  {/* Modal Image */}
                  <div className="w-full md:w-1/2 h-64 md:h-auto relative">
-                    <img
-                      src={selectedCamp.image}
-                      alt={selectedCamp.title}
-                      className="w-full h-full object-contain bg-gray-100"
-                    />
+                    {selectedCamp.video ? (
+                      <video
+                        src={selectedCamp.video}
+                        poster={selectedCamp.image}
+                        controls
+                        playsInline
+                        preload="metadata"
+                        className="w-full h-full object-contain bg-black"
+                      />
+                    ) : (
+                      <img
+                        src={selectedCamp.image}
+                        alt={selectedCamp.title}
+                        className="w-full h-full object-contain bg-gray-100"
+                      />
+                    )}
                     <div className="absolute top-4 left-4">
                         <span className="bg-white/90 backdrop-blur-md px-4 py-2 rounded-full text-mnit-blue font-bold text-sm shadow-lg">
                            {selectedCamp.date}
