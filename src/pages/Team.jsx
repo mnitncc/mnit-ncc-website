@@ -114,7 +114,7 @@ const Team = () => {
             >
               <div className="text-center mb-10">
                 <h2 className="text-3xl font-bold text-mnit-blue">
-                  Faculty Advisors
+                  Faculty
                 </h2>
                 <div className="w-24 h-1 bg-mnit-red mx-auto mt-2 rounded"></div>
               </div>

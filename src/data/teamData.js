@@ -1,5 +1,5 @@
 import Director from '../assets/team/director.jpg';
-import dean from '../assets/team/dean.png';
+import dean from '../assets/team/dean.jpg';
 import facultyCoordinator from '../assets/team/faculty-coordinator.jpeg';
 import ankit from '../assets/team/ankit.jpeg';
 
@@ -29,14 +29,14 @@ export const teamData = {
   faculty: [
     {
       id: 1,
-      name: "Prof. Kanupriya Sachdev",
+      name: "Prof. Satish Pipralia",
       role: "Dean of Students Welfare",
       image: dean,
     },
     {
       id: 2,
       name: "Dr. Anup Malik",
-      role: "Faculty Coordinator",
+      role: "Faculty Coordinator (NCC)",
       image: facultyCoordinator,
     },
   ],
