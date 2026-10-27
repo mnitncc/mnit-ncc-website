@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import cleanlinessImg from '../assets/events/cleanliness-campaign.jpg';
-import plantationImg from '../assets/events/plantation-drive.jpg';
-import armyDayImg from '../assets/events/army-day-event.jpg';
+import cleanlinessImg from '../assets/events/cleanliness-campaign.webp';
+import plantationImg from '../assets/events/plantation-drive.webp';
+import armyDayImg from '../assets/events/army-day-event.webp';
 
 const About = () => {
     return (

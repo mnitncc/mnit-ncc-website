@@ -13,6 +13,7 @@ const navLinks = [
   { name: 'Cadets', path: '/cadets' },
   { name: 'Downloads', path: '/downloads' },
   { name: 'FAQs', path: '/faqs' },
+  { name: 'Join NCC', path: '/join' },
 ];
 
 const Navbar = () => {

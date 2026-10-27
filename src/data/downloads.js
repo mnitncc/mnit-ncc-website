@@ -13,13 +13,14 @@
 // Optional fields you can use: date, size, category, type.
 
 export const downloadsData = [
-  {
-    id: 1,
-    title: "NCC Enrollment Form",
-    description: "Official enrollment form for new cadets joining the MNIT NCC unit.",
-    file: "/downloads/sample.pdf",
-    date: "2026-01-01",
-  },
+  // Hidden until the real form is available — /downloads/sample.pdf was never added.
+  // {
+  //   id: 1,
+  //   title: "NCC Enrollment Form",
+  //   description: "Official enrollment form for new cadets joining the MNIT NCC unit.",
+  //   file: "/downloads/sample.pdf",
+  //   date: "2026-01-01",
+  // },
   {
     id: 2,
     title: "NCC Handbook — Army (SD/SW)",

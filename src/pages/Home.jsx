@@ -1,16 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Hero from '../components/home/Hero';
 import { motion } from 'framer-motion';
-import { Target, Flag, Music, Users, Shield, Award, Camera } from 'lucide-react';
-import armyDay from '../assets/events/army-day-event.jpg';
-import shouryaSandhya from '../assets/events/shourya-sandhya.jpg';
-import cleanliness1 from '../assets/events/cleanliness-campaign.jpg';
-import cleanliness2 from '../assets/events/cleanliness-campaign-2.jpg';
-import plantation from '../assets/events/plantation-drive.jpg';
-import hero1 from '../assets/home/hero-1.jpeg';
-import hero2 from '../assets/home/hero-2.jpeg';
-import hero3 from '../assets/home/hero-3.jpg';
-import hero4 from '../assets/home/hero-4.jpeg';
+import { Target, Flag, Music, Users, Shield, Award, Camera, Bell, Trophy, ChevronRight } from 'lucide-react';
+import { noticesData } from '../data/notices';
+import { achievementsData } from '../data/achievements';
+import armyDay from '../assets/events/army-day-event.webp';
+import shouryaSandhya from '../assets/events/shourya-sandhya.webp';
+import cleanliness1 from '../assets/events/cleanliness-campaign.webp';
+import cleanliness2 from '../assets/events/cleanliness-campaign-2.webp';
+import plantation from '../assets/events/plantation-drive.webp';
+import hero1 from '../assets/home/hero-1.webp';
+import hero2 from '../assets/home/hero-2.webp';
+import hero3 from '../assets/home/hero-3.webp';
+import hero4 from '../assets/home/hero-4.webp';
 
 // Add or remove photos here — they will automatically appear in the reel.
 const reelImages = [
@@ -73,11 +76,97 @@ const FeatureCard = ({ icon: Icon, title, children, delay }) => (
   </motion.div>
 );
 
+const formatNoticeDate = (iso) =>
+  new Date(iso).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+
+// Internal paths use the router; anything else opens in a new tab.
+const SmartLink = ({ to, className, children }) =>
+  /^https?:\/\//.test(to) ? (
+    <a href={to} target="_blank" rel="noopener noreferrer" className={className}>{children}</a>
+  ) : (
+    <Link to={to} className={className}>{children}</Link>
+  );
+
 const Home = () => {
   return (
     <div className="bg-mnit-tint min-h-screen">
       <Hero />
 
+      {/* Notice Board & Cadet Achievements */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-5 gap-10">
+          {/* Notice Board */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="lg:col-span-2 bg-white rounded-3xl shadow-xl border border-gray-100 border-t-4 border-t-mnit-red p-6 md:p-8 h-fit"
+          >
+            <h2 className="text-2xl font-bold text-mnit-blue flex items-center gap-3 mb-6">
+              <Bell className="w-6 h-6 text-mnit-red" /> Notice Board
+            </h2>
+            <ul className="divide-y divide-gray-100">
+              {noticesData.slice(0, 5).map((notice, idx) => {
+                const body = (
+                  <>
+                    <p className="text-xs font-semibold text-mnit-red uppercase tracking-wider mb-1 flex items-center gap-2">
+                      {formatNoticeDate(notice.date)}
+                      {idx === 0 && (
+                        <span className="bg-mnit-gold text-mnit-navy px-2 py-0.5 rounded-full text-[10px] font-bold">NEW</span>
+                      )}
+                    </p>
+                    <p className="text-gray-700 leading-snug group-hover:text-mnit-blue transition-colors">{notice.title}</p>
+                  </>
+                );
+                return (
+                  <li key={notice.id} className="py-4 first:pt-0 last:pb-0">
+                    {notice.link ? (
+                      <SmartLink to={notice.link} className="block group">
+                        {body}
+                      </SmartLink>
+                    ) : body}
+                  </li>
+                );
+              })}
+            </ul>
+          </motion.div>
+
+          {/* Cadet Achievements */}
+          <div className="lg:col-span-3">
+            <h2 className="text-2xl font-bold text-mnit-blue flex items-center gap-3 mb-6">
+              <Trophy className="w-6 h-6 text-mnit-gold" /> Cadet Achievements
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              {achievementsData.map((item, idx) => (
+                <motion.div
+                  key={item.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: idx * 0.1 }}
+                >
+                  <SmartLink
+                    to={item.link}
+                    className="flex flex-col h-full bg-white rounded-2xl shadow-lg hover:shadow-2xl border border-gray-100 p-6 transition-all duration-300 hover:-translate-y-1 group"
+                  >
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">{item.date}</span>
+                      <Award className="w-5 h-5 text-mnit-gold" />
+                    </div>
+                    <h3 className="text-lg font-bold text-mnit-blue leading-snug mb-1">{item.title}</h3>
+                    <p className="text-sm font-semibold text-mnit-red mb-3">{item.cadet}</p>
+                    <p className="text-sm text-gray-600 leading-relaxed flex-1">{item.detail}</p>
+                    <span className="mt-4 text-sm font-semibold text-mnit-blue flex items-center gap-1 group-hover:gap-2 transition-all">
+                      Read more <ChevronRight className="w-4 h-4" />
+                    </span>
+                  </SmartLink>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
 
       {/* Aims & Pledge Section */}

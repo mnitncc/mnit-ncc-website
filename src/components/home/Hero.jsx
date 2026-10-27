@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import hero1 from '../../assets/home/hero-1.jpeg';
-import hero2 from '../../assets/home/hero-2.jpeg';
-import hero3 from '../../assets/home/hero-3.jpg';
-import hero4 from '../../assets/home/hero-4.jpeg';
+import hero1 from '../../assets/home/hero-1.webp';
+import hero2 from '../../assets/home/hero-2.webp';
+import hero3 from '../../assets/home/hero-3.webp';
+import hero4 from '../../assets/home/hero-4.webp';
 
 // Group photos pulled from the events gallery so the hero rotates through
 // actual unit activity. Group shots only — no selfies — and all landscape,
 // since the hero crops to a full-screen 16:9-ish frame.
-import independenceDay from '../../assets/events/august-2026/independence-day-2026-3.jpg';
-import tirangaYatra from '../../assets/events/august-2026/tiranga-yatra-2026-1.jpg';
-import plantationDrive from '../../assets/events/august-2026/plantation-aug-2026-1.jpg';
-import swachhataAbhiyan from '../../assets/events/october-2026/swachhata-abhiyan-2026-5.jpg';
-import shauryaSandhya from '../../assets/events/shourya-sandhya.jpg';
-import coVisitGroup from '../../assets/events/october-2026/co-visit-2026-1.jpg';
-import coVisitCadets from '../../assets/events/october-2026/co-visit-2026-5.jpg';
-import coVisitPresentation from '../../assets/events/october-2026/co-visit-2026-7.jpg';
+import independenceDay from '../../assets/events/august-2026/independence-day-2026-3.webp';
+import tirangaYatra from '../../assets/events/august-2026/tiranga-yatra-2026-1.webp';
+import plantationDrive from '../../assets/events/august-2026/plantation-aug-2026-1.webp';
+import swachhataAbhiyan from '../../assets/events/october-2026/swachhata-abhiyan-2026-5.webp';
+import shauryaSandhya from '../../assets/events/shourya-sandhya.webp';
+import coVisitGroup from '../../assets/events/october-2026/co-visit-2026-1.webp';
+import coVisitCadets from '../../assets/events/october-2026/co-visit-2026-5.webp';
+import coVisitPresentation from '../../assets/events/october-2026/co-visit-2026-7.webp';
 
 const images = [
   hero2,
@@ -86,6 +86,19 @@ const Hero = () => {
             Empowering youth with <span className="font-semibold text-white">Discipline</span>, <span className="font-semibold text-white">Leadership</span>, and a spirit of <span className="font-semibold text-white">Service</span>.
             Join us to serve the nation with pride and honor.
           </p>
+        </motion.div>
+
+        <motion.div
+           initial={{ opacity: 0, y: -30 }}
+           animate={{ opacity: 1, y: 0 }}
+           transition={{ duration: 0.8, delay: 0.6 }}
+        >
+          <Link
+            to="/join"
+            className="inline-block px-8 py-3 bg-mnit-red text-white rounded-xl font-bold uppercase tracking-wide shadow-lg hover:bg-red-700 transition-colors"
+          >
+            Join NCC
+          </Link>
         </motion.div>
 
 

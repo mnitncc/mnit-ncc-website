@@ -1,23 +1,23 @@
-import Director from '../assets/team/director.jpg';
-import dean from '../assets/team/dean.jpg';
-import facultyCoordinator from '../assets/team/faculty-coordinator.jpeg';
-import ankit from '../assets/team/ankit.jpeg';
+import Director from '../assets/team/director.webp';
+import dean from '../assets/team/dean.webp';
+import facultyCoordinator from '../assets/team/faculty-coordinator.webp';
+import ankit from '../assets/team/ankit.webp';
 
-import ashish from '../assets/team/cadets/ashish.jpeg';
-import bhargoDeol from '../assets/team/cadets/bhargo-deol.jpeg';
-import dinesh from '../assets/team/cadets/dinesh.jpeg';
-import dishaMeena from '../assets/team/cadets/disha-meena.jpeg';
-import divya from '../assets/team/cadets/divya.jpeg';
-import gaurav from '../assets/team/cadets/gaurav.jpeg';
-import harshita from '../assets/team/cadets/harshita.jpeg';
-import himanshu from '../assets/team/cadets/himanshu.jpeg';
-import jayant from '../assets/team/cadets/jayant.jpeg';
-import kaustubhiDevi from '../assets/team/cadets/kaustubhi-devi.jpeg';
-import mahesh from '../assets/team/cadets/mahesh.jpeg';
-import patnala from '../assets/team/cadets/patnala.jpeg';
-import rohit from '../assets/team/cadets/rohit.jpeg';
-import uttamSingh from '../assets/team/cadets/uttam-singh.jpeg';
-import chaitanya from '../assets/team/cadets/chaitanya.jpeg';
+import ashish from '../assets/team/cadets/ashish.webp';
+import bhargoDeol from '../assets/team/cadets/bhargo-deol.webp';
+import dinesh from '../assets/team/cadets/dinesh.webp';
+import dishaMeena from '../assets/team/cadets/disha-meena.webp';
+import divya from '../assets/team/cadets/divya.webp';
+import gaurav from '../assets/team/cadets/gaurav.webp';
+import harshita from '../assets/team/cadets/harshita.webp';
+import himanshu from '../assets/team/cadets/himanshu.webp';
+import jayant from '../assets/team/cadets/jayant.webp';
+import kaustubhiDevi from '../assets/team/cadets/kaustubhi-devi.webp';
+import mahesh from '../assets/team/cadets/mahesh.webp';
+import patnala from '../assets/team/cadets/patnala.webp';
+import rohit from '../assets/team/cadets/rohit.webp';
+import uttamSingh from '../assets/team/cadets/uttam-singh.webp';
+import chaitanya from '../assets/team/cadets/chaitanya.webp';
 
 export const teamData = {
   director: {
