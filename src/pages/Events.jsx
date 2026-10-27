@@ -56,7 +56,7 @@ const Events = () => {
                 {/* Overlay Title on Hover */}
                 <div className="absolute inset-0 flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                    <div className="text-white text-center w-full">
-                       <p className="font-bold text-lg mb-1">{event.date.split(',')[0]}</p>
+                       <p className="font-bold text-lg mb-1">{event.date}</p>
                        <p className="text-xs uppercase tracking-wider">View Details</p>
                    </div>
                 </div>
