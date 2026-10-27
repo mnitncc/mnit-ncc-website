@@ -14,14 +14,20 @@ import tirangaYatra from '../../assets/events/august-2026/tiranga-yatra-2026-1.j
 import plantationDrive from '../../assets/events/august-2026/plantation-aug-2026-1.jpg';
 import swachhataAbhiyan from '../../assets/events/october-2026/swachhata-abhiyan-2026-5.jpg';
 import shauryaSandhya from '../../assets/events/shourya-sandhya.jpg';
+import coVisitGroup from '../../assets/events/october-2026/co-visit-2026-1.jpg';
+import coVisitCadets from '../../assets/events/october-2026/co-visit-2026-5.jpg';
+import coVisitPresentation from '../../assets/events/october-2026/co-visit-2026-7.jpg';
 
 const images = [
   hero2,
+  coVisitGroup,
   independenceDay,
   hero1,
+  coVisitCadets,
   tirangaYatra,
   hero3,
   swachhataAbhiyan,
+  coVisitPresentation,
   hero4,
   plantationDrive,
   shauryaSandhya,

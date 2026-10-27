@@ -47,8 +47,38 @@ import saanValleyTrek2026_8 from '../assets/events/october-2026/saan-valley-trek
 import saanValleyTrek2026_9 from '../assets/events/october-2026/saan-valley-trek-2026-9.jpg';
 import saanValleyTrek2026_10 from '../assets/events/october-2026/saan-valley-trek-2026-10.jpg';
 import saanValleyTrek2026_11 from '../assets/events/october-2026/saan-valley-trek-2026-11.jpg';
+import coVisit2026_1 from '../assets/events/october-2026/co-visit-2026-1.jpg';
+import coVisit2026_2 from '../assets/events/october-2026/co-visit-2026-2.jpg';
+import coVisit2026_3 from '../assets/events/october-2026/co-visit-2026-3.jpg';
+import coVisit2026_4 from '../assets/events/october-2026/co-visit-2026-4.jpg';
+import coVisit2026_5 from '../assets/events/october-2026/co-visit-2026-5.jpg';
+import coVisit2026_6 from '../assets/events/october-2026/co-visit-2026-6.jpg';
+import coVisit2026_7 from '../assets/events/october-2026/co-visit-2026-7.jpg';
 
 export const eventsData = [
+  {
+    id: 15,
+    title: "Official Visit of the CO, 8 Raj Battalion NCC",
+    date: "October 26, 2026",
+    location: "MNIT Jaipur",
+    image: coVisit2026_1,
+    images: [
+      coVisit2026_1,
+      coVisit2026_2,
+      coVisit2026_3,
+      coVisit2026_4,
+      coVisit2026_5,
+      coVisit2026_6,
+      coVisit2026_7
+    ],
+    description: [
+      "The Commanding Officer of 8 Raj Battalion NCC, Lt. Col. Surender Singh Shekhawat, visited MNIT Jaipur on 26 October 2026 for the official inspection of the institute's NCC unit. Upon his arrival, he was warmly welcomed by Sergeant Harshita, Corporal Uttam Singh, Lance Corporal Rohit Shekhawat, Cadet Himanshu, Cadet Semdon Palmo, Dr. Anup Malik, Assistant Professor and NCC CTO, MNIT Jaipur, along with Associate Dean (SW), Prof. Dinesh Kumar.",
+      "Following the welcome, a meeting was held with the Institute Director, Prof. N. P. Padhy, in the Director's Board Room at Prabha Bhawan. The meeting provided an opportunity to discuss the functioning of the NCC unit, the institute's support for NCC activities, and the future development of the unit.",
+      "Subsequently, Lt. Col. Surender Singh Shekhawat interacted with the NCC cadets at Deeksha Sabhagar. He motivated the cadets to maintain discipline, dedication, teamwork, and enthusiasm in their NCC activities. He encouraged them to make the best use of the opportunities provided through NCC training and to work sincerely towards bringing pride and recognition to both the NCC unit and MNIT Jaipur.",
+      "The visit served as an encouraging and motivating occasion for the NCC cadets and reinforced the institute's commitment to promoting discipline, leadership, and a spirit of service among its students.",
+      "Unity and Discipline. Jai Hind!"
+    ]
+  },
   {
     id: 14,
     title: "Saan Valley Trekking Activity",
