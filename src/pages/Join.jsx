@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { UserPlus, CheckCircle2, Award, Tent, Dumbbell, Briefcase, Phone, Bell, HelpCircle } from 'lucide-react';
+import { UserPlus, CheckCircle2, Award, Tent, Dumbbell, Briefcase, Phone, HelpCircle } from 'lucide-react';
 
 const benefits = [
   { icon: Award, title: "'B' & 'C' Certificates", text: "Earn NCC certificates recognised across India, valued in Armed Forces, CAPF, police and other government recruitment." },
@@ -18,7 +18,7 @@ const eligibility = [
 ];
 
 const steps = [
-  { title: "Watch for the enrollment notice", text: "Enrollment opens at the start of the academic session and is announced on the Notice Board and through the institute." },
+  { title: "Watch for the enrollment notice", text: "Enrollment opens at the start of the academic session and is announced through the institute." },
   { title: "Register your interest", text: "Submit your details as instructed in the notice. Seats are limited — the unit has a sanctioned strength of 54 cadets." },
   { title: "Selection", text: "Shortlisted students go through the selection process conducted by the unit with 8 Raj Bn NCC." },
   { title: "Enrolment & training", text: "Selected students are enrolled as cadets of the Senior Division (SD) or Senior Wing (SW) and begin training." },
@@ -143,7 +143,7 @@ const Join = () => {
         >
           <h2 className="text-2xl md:text-3xl font-bold mb-3">Have questions?</h2>
           <p className="text-gray-200 max-w-2xl mx-auto mb-8">
-            Reach out to the Faculty Coordinator (NCC), or keep an eye on the Notice Board for the next enrollment drive.
+            Reach out to the Faculty Coordinator (NCC) for details about the next enrollment drive.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
@@ -152,12 +152,6 @@ const Join = () => {
             >
               <Phone className="w-5 h-5" /> Dr. Anup Malik
             </a>
-            <Link
-              to="/"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 border border-white/20 rounded-xl font-semibold hover:bg-white/20 transition-colors"
-            >
-              <Bell className="w-5 h-5" /> Notice Board
-            </Link>
             <Link
               to="/faqs"
               className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 border border-white/20 rounded-xl font-semibold hover:bg-white/20 transition-colors"
